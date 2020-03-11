@@ -11,7 +11,7 @@ Group Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+A beauty centered social media that let's users share and view step by step guides on all things beauty.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -28,13 +28,24 @@ Group Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can login
+* User can create an account
+  * User will select their interests after registering (hair, makeup, nails, etc.)
+* User can post tutorials
+* User can view tutorials
+* User can delete their tutorials
+* User can search tutorials
+* User can search for other users
+* User can like posts
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can see trending guides
+* User can get notifications when their tutorial is liked
+* User can see a list of their followers
+* User can see a list of their following
+* User can view other user's profile
+* User can comment on guides
 
 ### 2. Screen Archetypes
 
