@@ -1,66 +1,80 @@
-Unit 8: Group Milestone - README Example
+Group Project - README Template
 ===
 
-:::info
-**Below is an example** of what your **Group Project README** should include and how it should be structured for the **Unit 8 Group Milestone Submission**.
-:::
-
-# TUNIN
+# APP_NAME_HERE
 
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
 
 ## Overview
 ### Description
-
+[Description of your app]
 
 ### App Evaluation
-- **Category:** 
-- **Mobile:** 
-- **Story:** 
-- **Market:** 
-- **Habit:** 
+[Evaluation of your app across the following attributes]
+- **Category:**
+- **Mobile:**
+- **Story:**
+- **Market:**
+- **Habit:**
 - **Scope:**
 
 ## Product Spec
+
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
 
-* User logs in to access previous chats and preference settings
-
+* [fill in your required user stories here]
+* ...
 
 **Optional Nice-to-have Stories**
 
+* [fill in your required user stories here]
+* ...
 
 ### 2. Screen Archetypes
 
-* Login 
-* Register - User signs up or logs into their account
-* Profile Screen 
-   * Allows user to upload a photo and fill in information that is interesting to them and others
-* Settings Screen
-   * Lets people change language, and app notification settings.
+* [list first screen here]
+   * [list associated required story here]
+   * ...
+* [list second screen here]
+   * [list associated required story here]
+   * ...
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-
-
-Optional:
-*
+* [fill out your first tab]
+* [fill out your second tab]
+* [fill out your third tab]
 
 **Flow Navigation** (Screen to Screen)
 
+* [list first screen here]
+   * [list screen navigation here]
+   * ...
+* [list second screen here]
+   * [list screen navigation here]
+   * ...
 
 ## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
 
 ### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+[Add table of models]
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
