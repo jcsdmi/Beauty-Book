@@ -80,7 +80,7 @@ A beauty centered social media that let's users share and view step by step guid
 * Profile -> View and edit profile
                    -> Camera
   
-* Guides -> View step-by-step instructions and pictures 
+* Guides -> View user's saved step-by-step instructions and pictures, or create a new guide 
    
 * Settings-> Toggle settings
    
