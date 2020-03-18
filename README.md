@@ -12,7 +12,7 @@ A beauty centered social media that let's users share and view step by step guid
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
+- **Category:** Social Media/Beauty
 - **Mobile:**
 - **Story:**
 - **Market:**
