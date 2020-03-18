@@ -70,10 +70,15 @@ A beauty centered social media that let's users share and view step by step guid
 * Forced Log In -> Account creation if no log in is available
   
 * Activity Feed -> View recent tutorials you and others have done 
+            * Guides
+            * Profile
    
 * Explore -> Search for guides or users 
+            * Guides
+            * Profile
  
 * Profile -> View and edit profile
+            * Camera
   
 * Guides -> View step-by-step instructions and pictures 
    
