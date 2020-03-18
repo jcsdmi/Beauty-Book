@@ -45,12 +45,14 @@ A beauty centered social media that let's users share and view step by step guid
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Register - User signs up or logs into their account
+   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information and uploaded videos. 
+* Vision Board - Users can view other hairstyles that appear on the page to be liked and can view the hairstyles they upload themselves.
+* Profile Screen - Users can view their "Artist" profile and view the videos they uploaded and a tab to view the posts they liked.
+* Search - Users can search by tags or keywords to find a list of similar styles. The same can also be done with user names.
+* Settings - Lets people change language, and app notification settings.
+
 
 ### 3. Navigation
 
