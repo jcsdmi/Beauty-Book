@@ -58,19 +58,27 @@ A beauty centered social media that let's users share and view step by step guid
 
 * Login
 * Profile
-* Guides
-* Search/Explore
-* Camera
 * Activity Feed
+* Guides
+* Explore
+* Camera
+
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Forced Log In -> Account creation if no log in is available
+  
+* Activity Feed -> View recent tutorials you and others have done 
+   
+* Explore -> Search for guides or users 
+ 
+* Profile -> View and edit profile
+  
+* Guides -> View step-by-step instructions and pictures 
+   
+* Setting-> Toggle settings
+   
+* Camera-> Take pictures to add to guides or profile
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
