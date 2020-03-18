@@ -62,6 +62,7 @@ A beauty centered social media that let's users share and view step by step guid
 * Guides
 * Explore
 * Camera
+* Settings
 
 
 **Flow Navigation** (Screen to Screen)
@@ -76,7 +77,7 @@ A beauty centered social media that let's users share and view step by step guid
   
 * Guides -> View step-by-step instructions and pictures 
    
-* Setting-> Toggle settings
+* Settings-> Toggle settings
    
 * Camera-> Take pictures to add to guides or profile
 
