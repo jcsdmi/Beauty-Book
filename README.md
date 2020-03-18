@@ -89,8 +89,8 @@ A beauty centered social media that let's users share and view step by step guid
 * Camera-> Take pictures to add to guides or profile
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/XXM98eX.jpg" width=600>
+<img src="https://i.imgur.com/3yfynCK.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
