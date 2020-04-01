@@ -101,6 +101,18 @@ A beauty centered social media that let's users share and view step by step guid
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Home Screen
+  - (Read/GET) Query all posts where the user can view object
+  - (Create/POST) Create a new like on a post
+  - (Delete) Delete existing like
+  - (Create/POST) Create a new comment on a post
+  - (Delete) Delete existing comment
+- Profile
+  - (Read/GET) Query logged in user object
+  - (Update/PUT) Update user profile image
+- Guides
+  - (Read/GET) Query all available topics to narrow search
+- Explore
+  - (Read/GET) Query for users to search users or individual hairstyles
+- Settings
+  - 
