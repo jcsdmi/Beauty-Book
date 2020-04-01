@@ -97,9 +97,53 @@ A beauty centered social media that let's users share and view step by step guid
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Profiles
+
+   | Property      		  | Type                | Description |
+   | ---------------------| --------------------| ----------------------------------------------------------|
+   | profileId     		  | String              | unique id for the user profile 						  	|
+   | username     		  | String              | string that is the username    						  	|
+   | password     		  | String              | string that is the password    						  	|   
+   | profileImage         | File                | image for the user profile     						  	|
+   | profileDescription   | String              | Bio/text details about te user 						  	|
+   | profileFollower      | Array 	| array of pointers to people who are following the user 	|
+   | following     		  | Array   | array of pointers to people who are followed by the user  |
+
+#### Guide
+
+   | Property           | Type     		   | Description |
+   | -------------------| -----------------| -----------------------------------------------------------------|
+   | guideId            | String   		   | unique id for the user post (default field) 	  				  |
+   | guideTitle         | String 		   | Title For guide(default field)  			 					  |
+   | guideDescription   | String 		   | Description for guide(default field) 						 	  |
+   | guideImage         | File     		   | image that user posts 						  					  |
+   | guideCreator       | Pointer to Profile | Pointer to the Profile of Creator of Guide				      |
+   | guideLearners      | Array            | Array of Pointers to the Users who selected guide to learn from  |
+   | guideLikes         | Array   		   | Array of the Likes objects					   					  |
+   | instruction        | Array  		   | Array of the Instruction objects    			  				  |
+   | tags		        | Array  		   | Array of the strings. Strings can be searched for.				  |
+   | createdAt          | DateTime 		   | date when post is created (default field) 	  					  |
+   | updatedAt     		| DateTime 		   | date when post is last updated (default field) 				  |
+
+#### Instruction
+
+   | Property      		  | Type     		 | Description 										 |
+   | ---------------------| -----------------| --------------------------------------------------|
+   | instructId    		  | String   		 | unique id for the instructor post (default field) |
+   | guide         		  | Pointer to Guide | pointer to the guide 							 |
+   | instuctImage         | File     		 | image for instrcutions 							 |
+   | instructDescription  | String   		 | text instructions 								 |
+
+
+#### Likes
+
+   | Property      | Type     		 | Description 									|
+   | ------------- | ----------------| ---------------------------------------------|
+   | likeId    	   | String   		 | unique id for the like (default field) 		|
+   | isLiked       | Boolean		 | Like value. True = Like, False = Disliked	|
+   | liker         | Pointer to Profile | Pointer to the user who liked this			|
+
 ### Networking
 - Home Screen
   - (Read/GET) Query all posts where the user can view object
