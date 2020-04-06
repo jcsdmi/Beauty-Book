@@ -93,11 +93,11 @@ A beauty centered social media that let's users share and view step by step guid
 <img src="https://i.imgur.com/3yfynCK.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/M5uYkVO.png" width=600>
-<img src="https://i.imgur.com/qQpzrKK.png" width=600>
-<img src="https://i.imgur.com/gWhX2gW.png" width=600>
-<img src="https://i.imgur.com/BZ6X5wQ.png" width=600>
-<img src="https://i.imgur.com/XVP0lih.png" width=600>
+<img src="https://i.imgur.com/M5uYkVO.png" width=200>
+<img src="https://i.imgur.com/qQpzrKK.png" width=200>
+<img src="https://i.imgur.com/gWhX2gW.png" width=200>
+<img src="https://i.imgur.com/BZ6X5wQ.png" width=200>
+<img src="https://i.imgur.com/XVP0lih.png" width=200>
 
 ## Schema 
 ### Models
