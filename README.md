@@ -47,8 +47,9 @@ A beauty centered social media that let's users share and view step by step guid
 
 * Login
 * Register - User signs up or logs into their account
-   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information and uploaded videos. 
-* Vision Board - Users can view other hairstyles that appear on the page to be liked and can view the hairstyles they upload themselves.
+   * Upon download/reopening of the application, the user is prompted to log in to gain access to their profile information and uploaded videos. 
+* Activity Feed - Users can view guides created, read, and liked by the users they are following
+* Guides - Users can view hair, makeup, or nail guides or create a new guide in one the categories.
 * Profile Screen - Users can view their "Artist" profile and view the videos they uploaded and a tab to view the posts they liked.
 * Search - Users can search by tags or keywords to find a list of similar styles. The same can also be done with user names.
 * Settings - Lets people change language, and app notification settings.
@@ -102,7 +103,8 @@ A beauty centered social media that let's users share and view step by step guid
    | ---------------------| --------------------| ----------------------------------------------------------|
    | profileId     		  | String              | unique id for the user profile 						  	|
    | username     		  | String              | string that is the username    						  	|
-   | password     		  | String              | string that is the password    						  	|   
+   | password     		  | String              | string that is the password    						  	| 
+   | displayname      | String               | string that is the display name         |
    | profileImage         | File                | image for the user profile     						  	|
    | profileDescription   | String              | Bio/text details about te user 						  	|
    | profileFollower      | Array 	| array of pointers to people who are following the user 	|
