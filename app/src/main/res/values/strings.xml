@@ -2,6 +2,6 @@
     <string name="app_name">BeautyBook</string>
     <string name="login_button">Login</string>
     <string name="register_button">Register</string>
-    <string name="password_hint">Password</string>
-    <string name="username_hint">Username</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
