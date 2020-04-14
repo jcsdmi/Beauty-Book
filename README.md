@@ -166,6 +166,6 @@ Milestone 1:
 - [ ] User can login
 - [ ] User can register
 * These stories are still a work in progress. The splash screen and the login and register UI works.
-<img src="https://i.imgur.com/a93RRYA.gif" width=400>
+<img src="https://i.imgur.com/a93RRYA.gif" width=200>
 
 
