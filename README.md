@@ -5,6 +5,7 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
+3. [Milestones](Milestones)
 
 ## Overview
 ### Description
@@ -159,4 +160,12 @@ A beauty centered social media that let's users share and view step by step guid
 - Explore
   - (Read/GET) Query for users to search users or individual hairstyles
 - Settings
-  - 
+
+### Milestones 
+Milestone 1: 
+- [ ] User can login
+- [ ] User can register
+* These stories are still a work in progress. The splash screen and the login and register UI works.
+<img src="https://i.imgur.com/a93RRYA.gif" width=400>
+
+
