@@ -12,25 +12,25 @@
 
     <ImageView
         android:id="@+id/BeautyBookLogo"
-        android:layout_width="264dp"
-        android:layout_height="346dp"
+        android:layout_width="282dp"
+        android:layout_height="225dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="57dp"
         app:srcCompat="@drawable/whitelogo" />
 
     <TextView
         android:id="@+id/tvUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BeautyBookLogo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="237dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="192dp"
         android:layout_marginBottom="285dp"
         android:text="@string/username"
         android:textColor="#000000" />
@@ -39,11 +39,12 @@
         android:id="@+id/etUsername"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUsername"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="62dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="-285dp"
         android:layout_marginEnd="62dp"
         android:layout_marginRight="18dp"
         android:background="#fff"
@@ -52,14 +53,14 @@
 
     <TextView
         android:id="@+id/tvPassword"
-        android:layout_width="94dp"
+        android:layout_width="156dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etUsername"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="62dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="253dp"
+        android:layout_marginEnd="193dp"
         android:text="@string/password"
         android:textColor="#000000" />
 
@@ -67,12 +68,12 @@
         android:id="@+id/etPassword"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etUsername"
+        android:layout_below="@+id/tvPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="62dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="62dp"
         android:layout_marginRight="18dp"
         android:background="#fff"
@@ -81,27 +82,25 @@
 
     <Button
         android:id="@+id/bLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
         android:layout_below="@+id/etPassword"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="161dp"
-        android:text="@string/login_button" />
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/login_button"
+        android:textSize="10sp" />
 
     <Button
         android:id="@+id/bRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
         android:layout_below="@+id/etPassword"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="161dp"
-        android:text="@string/register_button" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="62dp"
+        android:text="@string/register_button"
+        android:textSize="10sp" />
 
 
 </RelativeLayout>
