@@ -25,6 +25,10 @@
         </activity>
 
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".CreateGuideActivity">
+        </activity>
+        <activity android:name=".CreateInstructionActivity">
+        </activity>
 
     </application>
 
