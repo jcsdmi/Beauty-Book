@@ -4,100 +4,103 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginActivity extends Activity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-    EditText username;
-    EditText password;
-    Button register;
-    Button login;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+public class LoginActivity extends AppCompatActivity {
+
+    EditText etUsername, etPassword;
+    TextView tvUsername, tvPassword;
+    private String parentbd = "users";
+    Button bLogin, bRegister;
+    ProgressBar pbProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        setupUI();
-        setupListeners();
-    }
+        bLogin = findViewById(R.id.bLogin);
+        etPassword = findViewById(R.id.etPassword);
+        etUsername = findViewById(R.id.etUsername);
+        pbProgress = findViewById(R.id.pbProgress);
+        pbProgress.setVisibility(View.INVISIBLE);
 
-    private void setupUI() {
-        username = findViewById(R.id.etUsername);
-        password = findViewById(R.id.etPassword);
-        register = findViewById(R.id.bRegister);
-        login = findViewById(R.id.bLogin);
-    }
-
-    private void setupListeners() {
-        login.setOnClickListener(new View.OnClickListener() {
+        bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkUsername();
+
+                String uname = etUsername.getText().toString();
+                String pass = etPassword.getText().toString();
+
+                if (TextUtils.isEmpty(uname)) {
+                    Toast.makeText(LoginActivity.this, "Username cannot be blank", Toast.LENGTH_SHORT).show();
+                } else if (TextUtils.isEmpty(pass)) {
+                    Toast.makeText(LoginActivity.this, "Password cannot be blank", Toast.LENGTH_SHORT).show();
+                } else {
+                    bLogin.setVisibility(View.INVISIBLE);
+                    pbProgress.setVisibility(View.VISIBLE);
+
+                    validateDetails(uname, pass);
+
+                }
             }
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
+    }
+
+    private void validateDetails(final String uname, final String pass) {
+        final DatabaseReference rootref;
+        rootref = FirebaseDatabase.getInstance().getReference();
+        rootref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                //Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
-                //startActivity(i);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.child(parentbd).child(uname).exists()) {
+                    User userdata = dataSnapshot.child(parentbd).child(uname).getValue(User.class);
+
+                    if (userdata.getUsername().equals(uname)) {
+
+                        if (userdata.getPassword().equals(pass)) {
+                            Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            bLogin.setVisibility(View.VISIBLE);
+                            pbProgress.setVisibility(View.INVISIBLE);
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                            pbProgress.setVisibility(View.INVISIBLE);
+                            bLogin.setVisibility(View.VISIBLE);
+                        }
+                    }
+                } else {
+                    Toast.makeText(LoginActivity.this, "This user does not exist", Toast.LENGTH_SHORT).show();
+                    pbProgress.setVisibility(View.INVISIBLE);
+                    bLogin.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
-    }
-
-    void checkUsername() {
-        boolean isValid = true;
-        if (isEmpty(username)) {
-            username.setError("You must enter username to login!");
-            isValid = false;
-        } else {
-            if (!isEmail(username)) {
-                username.setError("Enter valid email!");
-                isValid = false;
-            }
-        }
-
-        if (isEmpty(password)) {
-            password.setError("You must enter password to login!");
-            isValid = false;
-        } else {
-            if (password.getText().toString().length() < 4) {
-                password.setError("Password must be at least 4 chars long!");
-                isValid = false;
-            }
-        }
-
-        //check email and password
-        //IMPORTANT: here should be call to backend or safer function for local check; For example simple check is cool
-        //For example simple check is cool
-        if (isValid) {
-            String usernameValue = username.getText().toString();
-            String passwordValue = password.getText().toString();
-            if (usernameValue.equals("test@test.com") && passwordValue.equals("password1234")) {
-                //everything checked we open new activity
-                Intent i = new Intent(LoginActivity.this, FirstActivity.class);
-                startActivity(i);
-                //we close this activity
-                this.finish();
-            } else {
-                Toast t = Toast.makeText(this, "Wrong email or password!", Toast.LENGTH_SHORT);
-                t.show();
-            }
-        }
-    }
-
-    boolean isEmail(EditText text) {
-        CharSequence email = text.getText().toString();
-        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
-    }
-
-    boolean isEmpty(EditText text) {
-        CharSequence str = text.getText().toString();
-        return TextUtils.isEmpty(str);
     }
 }
+
