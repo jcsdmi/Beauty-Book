@@ -34,14 +34,24 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        // Initialize views
         bLogin = findViewById(R.id.bLogin);
+        bRegister = findViewById(R.id.bRegister);
         etPassword = findViewById(R.id.etPassword);
         etUsername = findViewById(R.id.etUsername);
         pbProgress = findViewById(R.id.pbProgress);
         pbProgress.setVisibility(View.INVISIBLE);
 
+        // Handle button clicks
         bRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start RegisterActivity
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
+
+        bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

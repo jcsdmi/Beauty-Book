@@ -35,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         bRegister = findViewById(R.id.bRegister);
-        bCancel = findViewById(R.id.bCancel);         // TO DO: MAKE CANCEL FUNCTIONAL
+        bCancel = findViewById(R.id.bCancel);         // TODO: MAKE CANCEL FUNCTIONAL
         etFirstName = findViewById(R.id.etFirstName);
         etLastName = findViewById(R.id.etLastName);
         etEmail = findViewById(R.id.etEmail);
@@ -60,30 +60,38 @@ public class RegisterActivity extends AppCompatActivity {
         String uname = etUserName.getText().toString();
         String pass = etPassword.getText().toString();
         String conf = etPasswordC.getText().toString();
+        boolean flag = false;
+
 
         if(TextUtils.isEmpty(fname)){
             Toast.makeText(this,"First name cannot be blank",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(TextUtils.isEmpty(lname)){
+        if(TextUtils.isEmpty(lname)){
             Toast.makeText(this,"Last name cannot be blank",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(TextUtils.isEmpty(email)){
+        if(TextUtils.isEmpty(email)){
             Toast.makeText(this,"Email cannot be blank",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(TextUtils.isEmpty(uname)){
+        if(TextUtils.isEmpty(uname)){
             Toast.makeText(this,"Username cannot be blank",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(TextUtils.isEmpty(pass)){
+        if(TextUtils.isEmpty(pass)){
             Toast.makeText(this,"Password cannot be blank",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(TextUtils.isEmpty(conf)){
+        if(TextUtils.isEmpty(conf)){
             Toast.makeText(this,"Confirm password",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else if(!pass.equals(conf)){
+        if(!pass.equals(conf)){
             Toast.makeText(this,"Passwords must match",Toast.LENGTH_SHORT).show();
+            flag = true;
         }
-        else{
-
+        if(!flag){
             pbProgress.setVisibility(View.VISIBLE);
             bRegister.setVisibility(View.INVISIBLE);
             validateDetails(fname, lname, email, uname, pass);
