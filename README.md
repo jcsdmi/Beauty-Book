@@ -168,4 +168,9 @@ Milestone 1:
 * These stories are still a work in progress. The splash screen and the login and register UI works.
 <img src="https://i.imgur.com/a93RRYA.gif" width=200>
 
+Milestone 2:
+- [ ] User can login
+- [ ] User can register
+* These stories are still a work in progress. Currently working on getting the register and login activity to connect to firebase.
+<img src="https://i.imgur.com/fiVeX2O.gif" width=200>
 
