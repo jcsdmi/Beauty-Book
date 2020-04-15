@@ -172,5 +172,5 @@ Milestone 2:
 - [ ] User can login
 - [ ] User can register
 * These stories are still a work in progress. Currently working on getting the register and login activity to connect to firebase.
-<img src="https://i.pinimg.com/originals/1a/e8/a0/1ae8a07ecd892243703bd047b3a3c5cb.gif" width=200>
+<img src="https://i.imgur.com/fiVeX2O.gif" width=200>
 
