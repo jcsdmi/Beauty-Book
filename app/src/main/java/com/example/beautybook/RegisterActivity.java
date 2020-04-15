@@ -35,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         bRegister = findViewById(R.id.bRegister);
-        bCancel = findViewById(R.id.bCancel);  // TO DO: MAKE CANCEL FUNCTIONAL
+        bCancel = findViewById(R.id.bCancel);         // TO DO: MAKE CANCEL FUNCTIONAL
         etFirstName = findViewById(R.id.etFirstName);
         etLastName = findViewById(R.id.etLastName);
         etEmail = findViewById(R.id.etEmail);
@@ -111,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(RegisterActivity.this, "Account has been succesfully created",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Account has been successfully created",Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                                         startActivity(intent);
                                         pbProgress.setVisibility(View.INVISIBLE);
@@ -120,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     }
                                     else {
                                         loading.dismiss();
-                                        loading.setTitle("Create Acount");
+                                        loading.setTitle("Create Account");
                                         loading.setMessage("Please wait while we check your details");
                                         loading.setCanceledOnTouchOutside(true);
                                         loading.show();
