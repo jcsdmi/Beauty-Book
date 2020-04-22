@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +30,10 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etFirstName, etLastName, etEmail, etUserName, etPassword, etPasswordC;
     private ProgressBar pbProgress;
     private ProgressDialog loading;
+
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,8 @@ public class RegisterActivity extends AppCompatActivity {
         etPasswordC = findViewById(R.id.etPasswordC);
         pbProgress = findViewById(R.id.pbProgress);
         pbProgress.setVisibility(View.INVISIBLE);
+
+        FirebaseApp.initializeApp(this);
 
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
