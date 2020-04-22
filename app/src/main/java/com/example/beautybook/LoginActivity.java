@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +30,10 @@ public class LoginActivity extends AppCompatActivity {
     private String parentbd = "users";
     Button bLogin, bRegister;
     ProgressBar pbProgress;
+
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +76,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+            // [START initialize_auth]
+            // Initialize Firebase Auth
+            mAuth = FirebaseAuth.getInstance();
+            // [END initialize_auth]
     }
 
     private void validateDetails(final String uname, final String pass) {
