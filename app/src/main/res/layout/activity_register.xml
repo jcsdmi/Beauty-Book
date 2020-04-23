@@ -172,7 +172,7 @@
         android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/tvFirstName"
+        android:id="@+id/tvName"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvRegister"
