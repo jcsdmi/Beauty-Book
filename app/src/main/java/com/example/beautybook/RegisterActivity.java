@@ -31,9 +31,9 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar pbProgress;
     private ProgressDialog loading;
 
-    // [START declare_auth]
+    // Declare an instance of FirebaseAuth
     private FirebaseAuth mAuth;
-    // [END declare_auth]
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,8 @@ public class RegisterActivity extends AppCompatActivity {
         pbProgress = findViewById(R.id.pbProgress);
         pbProgress.setVisibility(View.INVISIBLE);
 
-        FirebaseApp.initializeApp(this);
+        // Initialize the FirebaseAuth instance
+        mAuth = FirebaseAuth.getInstance();
 
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
